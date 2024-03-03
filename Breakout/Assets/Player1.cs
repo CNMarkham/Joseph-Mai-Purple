@@ -15,7 +15,7 @@ public class Player1 : MonoBehaviour
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Translate(Vector2.left * Time.deltaTime * speed);
+            transform.Translate(Vector2.right * Time.deltaTime * speed);
         }
 
     }

@@ -153,8 +153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyPrefab: {fileID: 8965685932859591808, guid: 947005d384b3d3141ba3119d45703170, type: 3}
-  xSpace: 2.2
-  xOffset: -10
+  xSpace: 1.25
+  xOffset: -8
 --- !u!4 &274411099
 Transform:
   m_ObjectHideFlags: 0
@@ -163,7 +163,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 274411097}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1577187, y: -1.6757771, z: -9.894933}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -373,4 +373,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e85f50432472744993014912f869076, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 8048387136968903013, guid: 8b15f149462263148b6e963de615aa8b, type: 3}
   speed: 8

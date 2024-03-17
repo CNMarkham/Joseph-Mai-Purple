@@ -14,9 +14,7 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
+
             transform.Translate(Vector2.up * Time.deltaTime * speed);
-        }
     }
 }

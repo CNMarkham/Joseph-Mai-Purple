@@ -9,7 +9,8 @@ public class ScreenWrap : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        screenMin = Camera.main.ScreenToWorldPoint(new Vector2 (0, 0));
+        screenMax = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
     }
 
     // Update is called once per frame
@@ -29,12 +30,12 @@ public class ScreenWrap : MonoBehaviour
             transform.position = new Vector2(screenMax.x, y);
         }
         //top side
-        if (y > screenMax.x)
+        if (y > screenMax.y)
         {
             transform.position = new Vector2(x,  screenMin.y);
         }
         //bottom side
-        if (y < screenMin.x)
+        if (y < screenMin.y)
         {
             transform.position = new Vector2(x,  screenMax.y);
         }

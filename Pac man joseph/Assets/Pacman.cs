@@ -16,36 +16,8 @@ public class Pacman : Movement
         transform.right = direction;
 
     }
-    private bool Occupied(Vector2 newDirection)
-    {
-        RaycastHit2D hit = Physics2D.BoxCast(transform.position, Vector2.one * 0.75f, 0f, newDirection, 1.5f, obstacleLayer);
-        return hit.collider != null;
-    }
 
-    protected void SetDirection(Vector2 newDirection)
-    {
-        if (!Occupied(newDirection))
-        {
-            direction = newDirection;
-            nextDirection = Vector2.zero;
 
-        }
-        else
-        {
-            nextDirection = newDirection;
-        }
-
-    }
-
-    private void Update()
-    {
-        if (nextDirection != Vector2.zero)
-        {
-            SetDirection(nextDirection);
-        }
-
-        ChildUpdate();
-    }
     
 }
 

@@ -201,6 +201,7 @@ GameObject:
   - component: {fileID: 1420325084289183709}
   - component: {fileID: 7031274293713576220}
   - component: {fileID: 7541495778150898953}
+  - component: {fileID: 7472396168480076604}
   m_Layer: 0
   m_Name: Ghost_Blinky
   m_TagString: Ghost
@@ -289,6 +290,30 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &7472396168480076604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140554411275848672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13524a5184bed17488bf09e3ae590ff8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 7
+  initialDirection: {x: -1, y: 0}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  body: {fileID: 3045682738800726967}
+  eyes: {fileID: 2007512484519408856}
+  blue: {fileID: 6544037547481967428}
+  white: {fileID: 1081635646263008069}
+  atHome: 0
+  homeDuration: 0
+  frightened: 0
 --- !u!1 &3045682738800726967
 GameObject:
   m_ObjectHideFlags: 0

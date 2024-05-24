@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2844808137761629362}
   - component: {fileID: 7898609599185150895}
   - component: {fileID: 1041709981428190615}
+  - component: {fileID: 6876059602938333194}
   m_Layer: 8
   m_Name: Koopa_Walk1
   m_TagString: Untagged
@@ -148,3 +149,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.25}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!95 &6876059602938333194
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8089572823044266401}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5ca63b6208bfa8842bf1b47fd842231c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

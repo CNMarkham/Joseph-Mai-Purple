@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 767672689077553609}
   - component: {fileID: 6422466833943351407}
   - component: {fileID: 8821810250461733355}
+  - component: {fileID: 7832725117526175648}
   m_Layer: 7
   m_Name: Mario_Small_Idle
   m_TagString: Player
@@ -203,6 +204,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 1}
   m_Direction: 0
+--- !u!114 &7832725117526175648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3915871598056766968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e4d86ff9f072848970bb3070df1eaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3982581612542245844
 GameObject:
   m_ObjectHideFlags: 0

@@ -792,6 +792,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mario_Small_Idle
       objectReference: {fileID: 0}
+    - target: {fileID: 7832725117526175648, guid: 0244e55dbcf85054cb3fa3da63aa1db2, type: 3}
+      propertyPath: jumpForce
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7832725117526175648, guid: 0244e55dbcf85054cb3fa3da63aa1db2, type: 3}
+      propertyPath: moveSpeed
+      value: 2000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2298,7 +2306,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6.904049
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2323,7 +2331,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.5, y: 6.5, z: -10}
+  m_LocalPosition: {x: 14.83, y: 6.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

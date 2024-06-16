@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 7818601800629207661}
   - component: {fileID: 1760290563772185413}
   - component: {fileID: 9070079079743888529}
+  - component: {fileID: 8450791712635644757}
+  - component: {fileID: 1793795174716933937}
+  - component: {fileID: 2868250276282620048}
   m_Layer: 8
   m_Name: Goomba_Walk1
   m_TagString: Untagged
@@ -170,3 +173,41 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8450791712635644757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3290231298516469614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c033774e577efed46aee4e2876130e76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  direction: {x: -1, y: 0}
+--- !u!114 &1793795174716933937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3290231298516469614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51bab2c151369014682e9af63c1e5155, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2868250276282620048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3290231298516469614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a648df6e15591b04eb03d4a84358b1e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

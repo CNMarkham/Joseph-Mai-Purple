@@ -63,11 +63,11 @@ public class PlayerMovement : MonoBehaviour
     }
     private void ChangeAnimations()
     {
-        foreach (Animator animator in GetComponentsInChildren<Animator>())
+        foreach (Animator animator in GetComponentsInChildren<Animator>()) // Makes the animation work
         {
-            animator.SetFloat("velocityX", rb.velocity.x);
-            animator.SetFloat("horizontalInput", Input.GetAxis("horizontal"));
-            animator.SetBool("inAir", hit.collider == null || jumping);
+            animator.SetFloat("velocityX", rb.velocity.x); 
+            animator.SetFloat("horizontalInput", Input.GetAxis("Horizontal")); //flips the animation when running
+            animator.SetBool("inAir", hit.collider == null || jumping); // makes the jump animation when jumping
         }
     }
 }

@@ -58,7 +58,7 @@ public class PlayerBehaviour : MonoBehaviour
         GetComponent<CapsuleCollider2D>().offset = new Vector2(0, 0.5f);
 
         big = true;
-        StartCoroutine("ChaneSize");
+        StartCoroutine("ChangeSize");
     }
 
     private void Death()// will cause the characvter to not able to move and play the animation for death and will destroy the object.
@@ -75,20 +75,23 @@ public class PlayerBehaviour : MonoBehaviour
     {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         Vector3 velocity = rb.velocity;
+        GetComponent<PlayerMovement>().enabled = false;
+        GetComponent<CapsuleCollider2D>().enabled = false;
+        rb.isKinematic = true;
+        rb.velocity = Vector3.zero;
 
         for (int i = 0; i < 8; i++) // will loop back from the big to small and ends on the opposite of the sprite right now
         {
             bigRenderer.enabled ^= true;// ^= means to the power of
             smallRenderer.enabled ^= true;
             yield return new WaitForSeconds(0.25f);// will pause a squater of a second before switches
+
+
         }
 
-        GetComponent<PlayerMovement>().enabled = false;
-        GetComponent<CapsuleCollider2D>().enabled = false;
-        rb.isKinematic = true;
-        rb.velocity = Vector3.zero;
-        
-
-
+        rb.isKinematic = false;
+        rb.velocity = velocity;
+        GetComponent<PlayerMovement>().enabled = true;
+        GetComponent<CapsuleCollider2D>().enabled = true;
     }
 }

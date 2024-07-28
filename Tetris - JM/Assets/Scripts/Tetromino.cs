@@ -9,8 +9,9 @@ public class Tetromino : MonoBehaviour
     public float fallTime;
     public float tempTime;
 
-    public static int height;
-    public static int width;
+    public static int height = 20;
+    public static int width = 10;
+    public static Transform[,] grid = new Transform[width, height];
 
     public Vector3 rotationPoint;
 
@@ -19,8 +20,7 @@ public class Tetromino : MonoBehaviour
     {
         fallTime = 0.8f;
         tempTime = fallTime;
-        height = 20;
-        width = 10;
+
     }
 
     // Update is called once per frame
@@ -54,16 +54,26 @@ public class Tetromino : MonoBehaviour
             }
         }
 
-        if(Input.GetKey(KeyCode.DownArrow))
+        if(Input.GetKeyDown(KeyCode.DownArrow))
         {
-            tempTime = tempTime * 0.1f;
+            tempTime = tempTime * 0.9f;
         }
 
         if (Time.time - previousTime > tempTime)
         {
             transform.position += Vector3.down;
             previousTime = Time.time;
+            if (!ValidMove())// checks if it is not possible to move down
+            {
+                transform.position += Vector3.up;
+                AddToGrid();
+                this.enabled = false;// disables the tetro
+                FindObjectOfType<Spawner>().SpawnTetromino();// call the spawner from other script
+
+            }
         }
+
+        CheckLines();
     }
 
     public bool ValidMove()
@@ -80,8 +90,72 @@ public class Tetromino : MonoBehaviour
             {
                 return false;
             }
+
+            if (grid[x, y] != null)
+            {
+                return false;
+            }
         }
          
         return true;//otherwise return true
+    }
+
+    public void AddToGrid()
+    {
+        foreach (Transform child in transform)
+        {
+            int x = Mathf.RoundToInt(child.transform.position.x);
+            int y = Mathf.RoundToInt(child.transform.position.y);
+
+            grid[x,y] = child;
+        }
+    }
+
+    public void CheckLines()// checks for rows
+    {
+        for (int i = height - 1; i >= 0; i--)
+        {
+            if(HasLine(i))
+            {
+                DeleteLine(i);
+                RowDown(i);
+            }
+        }
+    }
+
+    public bool HasLine(int i)// checks if empty or not
+    {
+        for (int j=0; j < width; j++)
+        {
+            if(grid[j,i] == null)
+            {
+                return false;
+            }
+        }
+        Debug.Log("Line made");
+        return true;
+    }
+    public void DeleteLine(int i)// deletes the blocks from the row
+    {
+        for (int j = 0; j < width; j++)
+        {
+            Destroy(grid[j, i].gameObject);
+            grid[j, i] = null;
+        }
+    }
+    public void RowDown(int i)// moves each row down one 
+    {
+        for (int y = i; y < height; y++)
+        {
+            for (int x = 0; x < width; x++)
+            {
+                if (grid[x, y] != null)
+                {
+                    grid[x, y - 1] = grid[x, y];//subtracts one from the y to move down and changes it to the regular grid
+                    grid[x, y] = null;
+                    grid[x, y - 1].transform.position += Vector3.down;
+                }
+            }
+        }
     }
 }
